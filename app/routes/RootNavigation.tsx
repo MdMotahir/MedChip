@@ -3,10 +3,12 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import TabNavigator from './TabNavigation';
 import NavigationNames from './NavigationNames';
-import { Text } from 'react-native';
 
 
 const Drawer = createDrawerNavigator();
+
+
+
 
 
 const RootNavigator = () => {
@@ -14,8 +16,9 @@ const RootNavigator = () => {
         <NavigationContainer>
             <Drawer.Navigator 
                 initialRouteName='Root'
+                screenOptions={{headerShown:false}}
             >
-                <Drawer.Screen name={NavigationNames.Root} component={TabNavigator}/>
+                <Drawer.Screen name={NavigationNames.Root} component={TabNavigator} options={{swipeEnabled:true}}/>
             </Drawer.Navigator>
         </NavigationContainer>
     )

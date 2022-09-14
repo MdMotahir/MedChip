@@ -11,9 +11,9 @@ const TabNavigator = () => {
     console.log("Hit")
     return (
         <Tab.Navigator>
-            <Tab.Screen name={NavigationNames.HomeTab} component={HomeStack} />
-            <Tab.Screen name={NavigationNames.MessageTab} component={MessageStack} />
-            <Tab.Screen name={NavigationNames.NotificationTab} component={NotificationStack} />
+            <Tab.Screen name={NavigationNames.HomeTab} component={HomeStack} options={{ headerShown: false }} />
+            <Tab.Screen name={NavigationNames.MessageTab} component={MessageStack} options={{ headerShown: false }}/>
+            <Tab.Screen name={NavigationNames.NotificationTab} component={NotificationStack} options={{ headerShown: false }} />
         </Tab.Navigator>
     )
 }
