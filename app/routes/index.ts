@@ -1,1 +1,1 @@
-export {default as RootNavigator} from './RootNavigation';
+export {default as App} from './RootNavigation';
