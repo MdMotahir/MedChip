@@ -8,7 +8,6 @@ const Tab = createBottomTabNavigator();
 
 
 const TabNavigator = () => {
-    console.log("Hit")
     return (
         <Tab.Navigator>
             <Tab.Screen name={NavigationNames.HomeTab} component={HomeStack} options={{ headerShown: false }} />
