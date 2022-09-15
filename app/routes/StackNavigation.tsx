@@ -17,7 +17,7 @@ export const HomeStack = () => {
             <Stack.Screen
                 name={NavigationNames.HomeScreen}
                 component={HomeScreen}
-                options={{ title: 'Home', headerShown: false }}
+                options={{ title: 'Home', headerShown: true }}
             />
         </Stack.Navigator>
     )
@@ -30,7 +30,7 @@ export const MessageStack = () => {
             <Stack.Screen
                 name={NavigationNames.MessageListScreen}
                 component={MessageListScreen}
-                options={{ title: 'Message', headerShown: false }}
+                options={{ title: 'Message', headerShown: true }}
             />
         </Stack.Navigator>
     )
@@ -44,7 +44,7 @@ export const NotificationStack = () => {
             <Stack.Screen
                 name={NavigationNames.NotificationListScreen}
                 component={NotificationListScreen}
-                options={{ title: 'Notification', headerShown: false }}
+                options={{ title: 'Notification', headerShown: true }}
             />
         </Stack.Navigator>
     )
