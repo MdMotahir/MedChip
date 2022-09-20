@@ -17,7 +17,7 @@ const tabScreenOptions: (props: {
     route: RouteProp<ParamListBase, keyof ParamListBase>;
     navigation: any;
 }) => BottomTabNavigationOptions = ({ route }) => ({
-    title:'',
+    title: '',
     tabBarIcon: ({ focused, color, size }) => {
         switch (route.name) {
             case NavigationNames.HomeTab:
@@ -28,14 +28,14 @@ const tabScreenOptions: (props: {
                 return <Bell height={25} width={25} />
         }
     },
-    tabBarIconStyle:{
-        marginTop:20,
+    tabBarIconStyle: {
+        marginTop: 20,
     },
     // tabBarActiveTintColor:ConfigStyles.SUCCESSFUL_COLOR,
     // tabBarInactiveTintColor:ConfigStyles.DANGER_COLOR,
-    tabBarStyle:{
+    tabBarStyle: {
         backgroundColor: ConfigStyles.PRIMARY_COLOR,
-        alignContent:"center"
+        alignContent: "center"
     }
 })
 
@@ -45,7 +45,7 @@ const TabNavigator = () => {
         <Tab.Navigator
             screenOptions={tabScreenOptions}
         >
-            <Tab.Screen name={NavigationNames.HomeTab} component={HomeStack} options={{ headerShown: true }} />
+            <Tab.Screen name={NavigationNames.HomeTab} component={HomeStack} options={{ headerShown: false }} />
             <Tab.Screen name={NavigationNames.MessageTab} component={MessageStack} options={{ headerShown: true }} />
             <Tab.Screen name={NavigationNames.NotificationTab} component={NotificationStack} options={{ headerShown: true }} />
         </Tab.Navigator>
