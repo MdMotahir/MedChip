@@ -4,6 +4,7 @@ import { createDrawerNavigator } from '@react-navigation/drawer';
 import TabNavigator from './TabNavigation';
 import NavigationNames from './NavigationNames';
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
+import { StatusBar } from 'react-native';
 
 const Drawer = createDrawerNavigator();
 
@@ -14,6 +15,10 @@ const Drawer = createDrawerNavigator();
 const RootNavigator = () => {
     return (
         <SafeAreaProvider>
+            <StatusBar
+                barStyle={'light-content'}
+                hidden={false}
+             />
             <NavigationContainer>
                 <Drawer.Navigator
                     initialRouteName='Root'
