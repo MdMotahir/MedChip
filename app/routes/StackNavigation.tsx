@@ -32,7 +32,7 @@ export const MessageStack = () => {
             <Stack.Screen
                 name={NavigationNames.MessageListScreen}
                 component={MessageListScreen}
-                options={{ title: 'Message', headerShown: true }}
+                options={{ title: 'Message', headerShown: false }}
             />
         </Stack.Navigator>
     )
@@ -46,7 +46,7 @@ export const NotificationStack = () => {
             <Stack.Screen
                 name={NavigationNames.NotificationListScreen}
                 component={NotificationListScreen}
-                options={{ title: 'Notification', headerShown: true }}
+                options={{ title: 'Notification', headerShown: false }}
             />
         </Stack.Navigator>
     )
