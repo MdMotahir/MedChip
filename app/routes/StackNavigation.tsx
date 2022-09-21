@@ -1,6 +1,8 @@
 import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import NavigationNames from './NavigationNames';
+import { stackScreenOptions } from './NavigationHelper';
+
 import {
     HomeScreen,
     MessageListScreen,
@@ -13,11 +15,11 @@ const Stack = createNativeStackNavigator();
 export const HomeStack = () => {
 
     return (
-        <Stack.Navigator>
+        <Stack.Navigator screenOptions={stackScreenOptions}>
             <Stack.Screen
                 name={NavigationNames.HomeScreen}
                 component={HomeScreen}
-                options={{ title: 'Home', headerShown: true }}
+                options={{ title: 'Home', headerShown: false }}
             />
         </Stack.Navigator>
     )
