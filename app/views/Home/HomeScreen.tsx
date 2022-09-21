@@ -11,7 +11,7 @@ export const HomeScreen: React.FC<PropsWithChildren> = (props) => {
         <LinearGradient
                 colors={['rgba(4, 62, 70, 1)', 'rgba(14, 50, 66, 1)', 'rgba(2, 36, 52, 1)']}
                 useAngle={true}
-                locations={[0.0,0.20,0.98]}
+                locations={[0.02,0.30,0.68]}
                 angle={134.35}
                 >
             <SafeAreaView style={{height:'100%'}}>

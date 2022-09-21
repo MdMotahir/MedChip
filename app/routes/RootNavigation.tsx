@@ -5,9 +5,12 @@ import TabNavigator from './TabNavigation';
 import NavigationNames from './NavigationNames';
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 import { StatusBar } from 'react-native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { HomeScreen, NotificationListScreen } from '../views';
 
 const Drawer = createDrawerNavigator();
 
+const Stack = createNativeStackNavigator();
 
 
 
@@ -19,14 +22,34 @@ const RootNavigator = () => {
                 barStyle={'light-content'}
                 hidden={false}
              />
-            <NavigationContainer>
+             {/* its for drawer */}
+            {/* <NavigationContainer>
                 <Drawer.Navigator
                     initialRouteName='Root'
                     screenOptions={{ headerShown: false }}
                 >
                     <Drawer.Screen name={NavigationNames.Root} component={TabNavigator} options={{ swipeEnabled: true }} />
                 </Drawer.Navigator>
+            </NavigationContainer> */}
+            
+            {/* without drawer */}
+
+
+            <NavigationContainer>
+                {/* <Stack.Navigator> */}
+                    {/* <Stack.Screen
+                        name={NavigationNames.NotificationListScreen}
+                        component={NotificationListScreen}
+                        options={{ title: 'Notification', headerShown: false }}
+                    /> */}
+                    {/* <Stack.Screen
+                        name={NavigationNames.HomeScreen}
+                        component={TabNavigator}
+                        options={{ title: 'Home', headerShown: false }}
+                    /> */}
+                {/* </Stack.Navigator> */}
             </NavigationContainer>
+
         </SafeAreaProvider>
     )
 }
