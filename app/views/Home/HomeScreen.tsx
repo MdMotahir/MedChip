@@ -13,11 +13,11 @@ export const HomeScreen: React.FC<PropsWithChildren> = (props) => {
                 useAngle={true}
                 locations={[0.02,0.30,0.68]}
                 angle={134.35}
+                angleCenter={{x:0,y:0}}
                 >
             <SafeAreaView style={{height:'100%'}}>
                     <Text>sign in with Facebook</Text>
             </SafeAreaView>
         </LinearGradient>
-
     )
 }

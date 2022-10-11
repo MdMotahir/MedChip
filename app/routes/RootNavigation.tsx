@@ -7,6 +7,7 @@ import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 import { StatusBar } from 'react-native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { HomeScreen, NotificationListScreen } from '../views';
+import { LoginScreen } from '../views/Auth';
 
 const Drawer = createDrawerNavigator();
 
@@ -36,18 +37,18 @@ const RootNavigator = () => {
 
 
             <NavigationContainer>
-                {/* <Stack.Navigator> */}
-                    {/* <Stack.Screen
-                        name={NavigationNames.NotificationListScreen}
-                        component={NotificationListScreen}
-                        options={{ title: 'Notification', headerShown: false }}
-                    /> */}
-                    {/* <Stack.Screen
+                <Stack.Navigator>
+                    <Stack.Screen
+                        name={NavigationNames.LoginScreen}
+                        component={LoginScreen}
+                        options={{ title: 'LoginScreen', headerShown: false }}
+                    />
+                    <Stack.Screen
                         name={NavigationNames.HomeScreen}
                         component={TabNavigator}
                         options={{ title: 'Home', headerShown: false }}
-                    /> */}
-                {/* </Stack.Navigator> */}
+                    />
+                </Stack.Navigator>
             </NavigationContainer>
 
         </SafeAreaProvider>

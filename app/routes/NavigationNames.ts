@@ -1,7 +1,8 @@
 export default {
     //drawer name
     Root:"Root",
-
+    // Auth
+    LoginScreen:"LoginScreen",
 
     // tab name
     HomeTab:"HomeTab",
