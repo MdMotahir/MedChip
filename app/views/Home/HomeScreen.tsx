@@ -1,5 +1,5 @@
 import React, {type PropsWithChildren} from 'react';
-import { Text,StyleSheet, StatusBar } from 'react-native';
+import { Text} from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import LinearGradient from 'react-native-linear-gradient';
 import { ConfigStyles } from '../../config';
