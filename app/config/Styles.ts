@@ -40,5 +40,63 @@ export const ConfigStyles = {
     SECONDARY_COLOR: SECONDARY_COLOR,
     SUCCESSFUL_COLOR: SUCCESSFUL_COLOR,
     DANGER_COLOR: DANGER_COLOR,
-    PRIMARY_GRADIENT_COLOR: PRIMARY_GRADIENT_COLOR
+    PRIMARY_GRADIENT_COLOR: PRIMARY_GRADIENT_COLOR,
+    LoginScreen: {
+        IconSection: {
+            flex: 3.2,
+            alignItems: "center",
+            justifyContent: "center"
+        },
+        HeadLine:{
+            flex:0.3,
+            alignItems:"center",
+            justifyContent:"center"
+        },
+        InputSection:{
+            flex:2,
+            alignItems:"center",
+            justifyContent:"space-evenly"
+        },
+        Input:{
+            height: 50,
+            backgroundColor: PRIMARY_COLOR,
+            borderRadius: 20,
+            width: '75%',
+            padding: 10,
+            color: LIGHT 
+        },
+        LoginBTN:{
+            height: 50,
+            backgroundColor: PRIMARY_COLOR,
+            borderRadius: 20,
+            width: '40%',
+            justifyContent: "center"
+        },
+        LoginText:{
+            color: LIGHT,
+            fontSize: 17,
+            textAlign: "center",
+            fontWeight: "600"
+        },
+        FooterSection:{
+            flex: 1,
+            alignItems: "center",
+            flexDirection: "row",
+            justifyContent: "space-between",
+            paddingHorizontal: 20
+        },
+        VersionSection:{
+            flexDirection: "row",
+            alignItems: "center"
+        },
+        VersionText:{
+            color: LIGHT,
+            marginRight: 10,
+            fontSize: 15
+        },
+        ForgotText:{
+            color: LIGHT,
+            fontSize: 15
+        }
+    }
 }
