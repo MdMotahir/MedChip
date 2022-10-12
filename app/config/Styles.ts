@@ -47,10 +47,21 @@ export const ConfigStyles = {
             alignItems: "center",
             justifyContent: "center"
         },
-        HeadLine:{
+        IconText:{
+            color: LIGHT,
+            marginTop: 20,
+            fontSize: 15,
+            fontFamily:"Cairo-Regular"
+        },
+        HeadingSection:{
             flex:0.3,
             alignItems:"center",
-            justifyContent:"center"
+            justifyContent:"center",
+        },
+        HeadingText:{
+            color: LIGHT,
+            fontSize: 20,
+            fontFamily:"Cairo-SemiBold"
         },
         InputSection:{
             flex:2,
@@ -63,20 +74,22 @@ export const ConfigStyles = {
             borderRadius: 20,
             width: '75%',
             padding: 10,
-            color: LIGHT 
+            color: LIGHT,
+            fontSize: 17,
+            fontFamily:"Cairo-SemiBold"
         },
         LoginBTN:{
             height: 50,
             backgroundColor: PRIMARY_COLOR,
             borderRadius: 20,
             width: '40%',
-            justifyContent: "center"
+            justifyContent: "center",
         },
         LoginText:{
             color: LIGHT,
             fontSize: 17,
             textAlign: "center",
-            fontWeight: "600"
+            fontFamily:"Cairo-SemiBold"
         },
         FooterSection:{
             flex: 1,
@@ -92,11 +105,13 @@ export const ConfigStyles = {
         VersionText:{
             color: LIGHT,
             marginRight: 10,
-            fontSize: 15
+            fontSize: 17,
+            fontFamily:"Cairo-SemiBold"
         },
         ForgotText:{
             color: LIGHT,
-            fontSize: 15
+            fontSize: 17,
+            fontFamily:"Cairo-SemiBold"
         }
     }
 }

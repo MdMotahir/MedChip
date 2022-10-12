@@ -20,10 +20,10 @@ export const LoginScreen: React.FC<PropsWithChildren> = (props) => {
             <SafeAreaView style={{ height: '100%'}}>
                 <View style={ConfigStyles.LoginScreen.IconSection}>
                     <ChipIcon height={180} width={180} />
-                    <Text style={{ color: "white", marginTop: 20, fontSize: 15 }}>Connected Health Intelligence Platform</Text>
+                    <Text style={ConfigStyles.LoginScreen.IconText}>Connected Health Intelligence Platform</Text>
                 </View>
-                <View style={ConfigStyles.LoginScreen.HeadLine}>
-                    <Text style={{ color: "white", fontSize: 20, fontWeight: "600" }}>Sign in to your CHiP account</Text>
+                <View style={ConfigStyles.LoginScreen.HeadingSection}>
+                    <Text style={ConfigStyles.LoginScreen.HeadingText}>Sign in to your CHiP account</Text>
                 </View>
                 <KeyboardAvoidingView
                     behavior={Platform.OS === "ios" ? "padding" : "height"}
