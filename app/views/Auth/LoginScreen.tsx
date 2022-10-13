@@ -3,11 +3,14 @@ import { View, Text, TextInput, KeyboardAvoidingView, Platform, TouchableOpacity
 import LinearGradient from "react-native-linear-gradient";
 import { SafeAreaView } from "react-native-safe-area-context";
 import ChipIcon from "../../../assets/svgImages/Frame.svg";
+import Visible from "../../../assets/svgImages/visible.svg";
+import Invisible from "../../../assets/svgImages/invisible.svg";
 import GlobalSettings from "../../../assets/svgImages/global-settings.svg";
 import { ConfigStyles } from "../../config";
 
 export const LoginScreen: React.FC<PropsWithChildren> = (props) => {
     const [text, setText] = useState('');
+    const [visible, setVisible] = useState(false);
 
     return (
         <LinearGradient
@@ -37,14 +40,22 @@ export const LoginScreen: React.FC<PropsWithChildren> = (props) => {
                     // onChangeText={newText => setText(newText)}
                     // defaultValue={""}
                     />
-                    <TextInput
-                        style={ConfigStyles.LoginScreen.Input}
-                        placeholder="Password"
-                        placeholderTextColor={ConfigStyles.LIGHT}
-                        selectionColor={ConfigStyles.LIGHT}
-                    // onChangeText={newText => setText(newText)}
-                    // defaultValue={""}
-                    />
+                    <View style={{flexDirection:"row", width:'75%', backgroundColor:ConfigStyles.PRIMARY_COLOR, borderRadius:20, justifyContent:"space-between", alignItems:"center"}}>
+                        <TextInput
+                            style={[ConfigStyles.LoginScreen.Input,{width:'85%'}]}
+                            placeholder="Password"
+                            placeholderTextColor={ConfigStyles.LIGHT}
+                            selectionColor={ConfigStyles.LIGHT}
+                        // onChangeText={newText => setText(newText)}
+                        // defaultValue={""}
+                        />
+                        <TouchableOpacity
+                            style={{width:"15%", alignItems:"center"}}
+                            onPress={()=>setVisible(!visible)}
+                        >
+                            {visible ? <Invisible/> : <Visible/>}
+                        </TouchableOpacity>
+                    </View>
                     <TouchableOpacity
                         style={ConfigStyles.LoginScreen.LoginBTN}
                     // onPress={this.onPress}
