@@ -112,6 +112,14 @@ export const ConfigStyles = {
             color: LIGHT,
             fontSize: 17,
             fontFamily:"Cairo-SemiBold"
+        },
+        PasswordSection:{
+            flexDirection:"row",
+            width:'75%',
+            backgroundColor:PRIMARY_COLOR,
+            borderRadius:20,
+            justifyContent:"flex-start",
+            alignItems:"center"
         }
     }
 }

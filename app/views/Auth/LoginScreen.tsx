@@ -7,8 +7,12 @@ import Visible from "../../../assets/svgImages/visible.svg";
 import Invisible from "../../../assets/svgImages/invisible.svg";
 import GlobalSettings from "../../../assets/svgImages/global-settings.svg";
 import { ConfigStyles } from "../../config";
+import { useNavigation } from "@react-navigation/native";
+import NavigationNames from "../../routes/NavigationNames";
 
 export const LoginScreen: React.FC<PropsWithChildren> = (props) => {
+    const navigation = useNavigation();
+
     const [text, setText] = useState('');
     const [visible, setVisible] = useState(false);
 
@@ -40,11 +44,13 @@ export const LoginScreen: React.FC<PropsWithChildren> = (props) => {
                     // onChangeText={newText => setText(newText)}
                     // defaultValue={""}
                     />
-                    <View style={{flexDirection:"row", width:'75%', backgroundColor:ConfigStyles.PRIMARY_COLOR, borderRadius:20, justifyContent:"space-between", alignItems:"center"}}>
+                    <View style={ConfigStyles.LoginScreen.PasswordSection}>
                         <TextInput
                             style={[ConfigStyles.LoginScreen.Input,{width:'85%'}]}
                             placeholder="Password"
                             placeholderTextColor={ConfigStyles.LIGHT}
+                            secureTextEntry={visible}
+                            caretHidden={visible}
                             selectionColor={ConfigStyles.LIGHT}
                         // onChangeText={newText => setText(newText)}
                         // defaultValue={""}
@@ -53,12 +59,12 @@ export const LoginScreen: React.FC<PropsWithChildren> = (props) => {
                             style={{width:"15%", alignItems:"center"}}
                             onPress={()=>setVisible(!visible)}
                         >
-                            {visible ? <Invisible/> : <Visible/>}
+                            {visible ? <Visible/> : <Invisible/>}
                         </TouchableOpacity>
                     </View>
                     <TouchableOpacity
                         style={ConfigStyles.LoginScreen.LoginBTN}
-                    // onPress={this.onPress}
+                        onPress={()=>navigation.navigate(NavigationNames.HomeScreen)}
                     >
                         <Text style={ConfigStyles.LoginScreen.LoginText}>Sign In</Text>
                     </TouchableOpacity>
