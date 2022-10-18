@@ -8,6 +8,7 @@ import { StatusBar } from 'react-native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { HomeScreen, NotificationListScreen } from '../views';
 import { LoginScreen } from '../views/Auth';
+import { SideBarScreen } from '../views/Menu';
 
 const Drawer = createDrawerNavigator();
 
@@ -42,6 +43,11 @@ const RootNavigator = () => {
                         name={NavigationNames.LoginScreen}
                         component={LoginScreen}
                         options={{ title: 'LoginScreen', headerShown: false }}
+                    />
+                    <Stack.Screen
+                        name={NavigationNames.SideBarScreen}
+                        component={SideBarScreen}
+                        options={{ title: 'SideBarScreen', headerShown: false }}
                     />
                     <Stack.Screen
                         name={NavigationNames.HomeScreen}

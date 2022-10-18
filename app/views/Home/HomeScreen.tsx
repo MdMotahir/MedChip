@@ -21,16 +21,17 @@ export const HomeScreen: React.FC<PropsWithChildren> = (props) => {
 
     return (
         <LinearGradient
+                style={{height:'100%'}}
                 colors={['rgba(4, 62, 70, 1)', 'rgba(14, 50, 66, 1)', 'rgba(2, 36, 52, 1)']}
                 useAngle={true}
                 locations={[0.02,0.30,0.68]}
                 angle={134.35}
                 angleCenter={{x:0,y:0}}
                 >
-            <SafeAreaView style={{height:'100%'}}>
+            <SafeAreaView style={{flex:1}}>
                     <View style={{flex:0.5, flexDirection:"row",alignItems:"center", justifyContent:"space-between",paddingHorizontal: 20}}>
                         <TouchableOpacity
-                            onPress={()=>navigation.navigate(NavigationNames.LoginScreen)}
+                            onPress={()=>navigation.navigate(NavigationNames.SideBarScreen)}
                         >
                             <Menu height={30} width={30}/>
                         </TouchableOpacity>

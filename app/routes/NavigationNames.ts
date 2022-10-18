@@ -12,5 +12,6 @@ export default {
     //Screen Name
     HomeScreen:"HomeScreen",
     MessageListScreen:"MessageListScreen",
-    NotificationListScreen:"NotificationListScreen"
+    NotificationListScreen:"NotificationListScreen",
+    SideBarScreen:"SideBarScreen",
 }

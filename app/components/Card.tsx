@@ -7,7 +7,6 @@ interface Tprops {
 }
 
 export const Card: React.FC<PropsWithChildren> = (props:Tprops) => {
-    console.log(props)
     
     return(
         <View style={{backgroundColor:ConfigStyles.PRIMARY_COLOR, borderRadius:20, alignItems:"center", justifyContent:"center", height:150, width:150, margin:10}}>
